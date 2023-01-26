@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Cadastrar</h1>
+
+        <div id="msgError"></div>
+        <div id="msgSuccess"></div>
+
+        <div class="label-float">
+          <input type="text" id="nome" placeholder=" " required />
+          <label id="labelNome" for="nome">Nome</label>
+        </div>
+
+        <div class="label-float">
+          <input type="text" id="usuario" placeholder=" " required />
+          <label id="labelUsuario" for="usuario">Usuário</label>
+        </div>
+
+        <div class="label-float">
+          <input type="password" id="senha" placeholder=" " required onkeypress="NivelBarraProgresso" onkeyup="NivelBarraProgresso()" />
+          <label id="labelSenha" for="senha">Senha</label>
+          <i
+            id="verSenha"
+            class="fa fa-eye"
+            aria-hidden="true"
+            onclick="ToggleSenha()"
+          ></i>
+          <div class="barraProgresso" id="barraProgresso">
+            <small class="nivelSeguranca" id="nivelSeguranca"></small>
+          </div>
+        </div>
+
+        <div class="label-float">
+          <input type="password" id="confirmarSenha" placeholder=" " required />
+          <label id="labelConfirmarSenha" for="confirmarSenha"
+            >Confirmar Senha</label
+          >
+          <i
+            id="verConfirmarSenha"
+            class="fa fa-eye"
+            aria-hidden="true"
+            onclick="ToggleConfirmarSenha()"
+          ></i>
+        </div>
+
+        <div class="justify-center">
+          <button onclick="cadastrar()">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
